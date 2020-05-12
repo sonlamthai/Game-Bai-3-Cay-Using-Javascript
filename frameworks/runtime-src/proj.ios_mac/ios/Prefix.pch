@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'Game3Cay' target in the 'Game3Cay' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+	#import <UIKit/UIKit.h>
+#endif
