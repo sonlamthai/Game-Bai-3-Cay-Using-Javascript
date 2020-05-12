@@ -66,7 +66,7 @@ var res = {
     bg_menu: "/res/bg_menu5.jpg",
     bg_black: "/res/bg_black.jpg",
     gameNameFont: { type: "font", name: "gameNameFont", srcs: ["../res/fonts/UVNNguyenDu.TTF"] },
-    menuFont: { type: "font", name: "menuFont", srcs: ["/res/fonts/iCielSoupofJustice.ttf"] },
+    menuFont: { type: "font", name: "menuFont", srcs: ["./res/fonts/iCielSoupofJustice.ttf"] },
     userFont: { type: "font", name: "userFont", srcs: ["/res/fonts/UVNMauTim2.TTF"] },
     controlFont: { type: "font", name: "controlFont", srcs: ["/res/fonts/UVNBanTay.TTF"] },
     scoreFont: { type: "font", name: "scoreFont", srcs: ["/res/fonts/iCiel Altus Serif.ttf"] },
