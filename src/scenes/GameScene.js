@@ -11,7 +11,6 @@ var ObjResult = {
 var GameLayer = cc.Layer.extend({
     ctor: function () {
         this._super();
-        cc.log("Tao Game Layer");
         let size = cc.director.getWinSize();
 
         var gameBackground = new ccui.ImageView(res.gameBackground);
@@ -91,7 +90,6 @@ var GameLayer = cc.Layer.extend({
             cc.audioEngine.setEffectsVolume(1);
             cc.audioEngine.playEffect(res.distributeEff);
 
-            cc.log(cardsPlay);
             for (var j = 0; j < cardsPlay.length; j++) {
                 if (j % 2 == 0) {
                     var moveB = new cc.MoveTo(0.1, cc.p(562 + (j * 40), 520));
@@ -128,7 +126,6 @@ var GameLayer = cc.Layer.extend({
                 valueA += cardsPlay[i].getValue();
             }
         }
-        console.log(cardsOrder);
 
         var scoreA = valueA % 10;
         var scoreB = valueB % 10;
@@ -140,7 +137,6 @@ var GameLayer = cc.Layer.extend({
 
     showResult: function (sender, type) {
         if (type == ccui.Widget.TOUCH_BEGAN) {
-            cc.log("ham show result");
             this.btnShowResult.setVisible(false);
             var layerResult = new LayerResult(this.result);
             this.addChild(layerResult);
@@ -155,7 +151,6 @@ var GameLayer = cc.Layer.extend({
 var LayerResult = cc.Layer.extend({
     ctor: function (result) {
         this._super();
-        cc.log("tao layer result");
         let size = cc.director.getWinSize();
 
         var bg = new ccui.ImageView(res.bg_black);
@@ -322,20 +317,17 @@ function shuffle(array) {
 var replay = function () {
     cardsPlay = [];
     cc.director.runScene(new cc.TransitionFadeUp(1, new GameScene()));
-    cc.log("replay");
 }
 
 var backMenu = function () {
     cardsPlay = [];
     cc.director.runScene(new cc.TransitionProgressRadialCCW(1, new MenuScene()));
-    cc.log("main menu");
 }
 
 
 var GameScene = cc.Scene.extend({
     onEnter: function () {
         this._super();
-        cc.log("Tao Game Scene");
         var layer = new GameLayer();
         this.addChild(layer);
     }

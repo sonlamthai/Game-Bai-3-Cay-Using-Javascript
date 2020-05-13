@@ -2,7 +2,6 @@ var MenuLayer = cc.Layer.extend({
     ctor: function () {
         this._super();
 
-        cc.log("Tao PlayLayer");
         var size = cc.director.getWinSize();
         cc.log(size);
 
@@ -42,7 +41,6 @@ var goGameScene = function () {
 var MenuScene = cc.Scene.extend({
     onEnter: function () {
         this._super();
-        cc.log("Tao Play Scene");
         var layer = new MenuLayer();
         this.addChild(layer);
     }

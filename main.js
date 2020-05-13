@@ -104,9 +104,7 @@ cc.game.onStart = function () {
     cc.view.resizeWithBrowserSize(true);
 
     //load resources
-    cc.log(g_resources);
     cc.LoaderScene.preload(g_resources, function () {
-        cc.log("Trc khi tao Play Scene");
         var menuScene = new MenuScene();
         cc.director.runScene(menuScene);
     }, this);
