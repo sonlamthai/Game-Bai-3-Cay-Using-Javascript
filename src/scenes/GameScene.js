@@ -75,8 +75,7 @@ var GameLayer = cc.Layer.extend({
         // this.btnShowResult.addClickEventListener(this.showResult.bind(this));
         this.addChild(this.btnShowResult);
         this.btnShowResult.setVisible(false);
-
-
+        console.log("abcxyz");
 
     },
 
